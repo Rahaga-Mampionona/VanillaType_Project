@@ -8,7 +8,7 @@ button.addEventListener ( "click" , function(e){
     let nom = "nomena"
     let mots = "789456"
     if ( username.value == nom && password.value == mots && email.value == mail){
-        window.location.href = ""
+        window.location.href = "index.html"
         button.value = "..."
         setTimeout(function(e){
             button.value = "Login Now"
