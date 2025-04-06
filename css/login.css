@@ -1,0 +1,9 @@
+body {
+    background-color: rgb(150, 150, 150);
+}
+.logo{
+    width: 230px;
+    border-radius: 50%;
+    margin-left: 40%;
+    margin-top: 9%;
+}
