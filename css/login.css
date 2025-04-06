@@ -6,4 +6,38 @@ body {
     border-radius: 50%;
     margin-left: 40%;
     margin-top: 9%;
+    box-shadow: 2px 5px 20px #202020;
+}
+.identify{
+    display: flex;
+    flex-direction:column;
+    margin-top: 1%;
+    margin-left: 41%;
+    gap: 30px;
+    width: 10%;
+}
+.identify_email{
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 5px 20px #202020;
+}
+.identify_name{
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 5px 20px #202020;
+}
+.identify_password{
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 5px 20px #202020;
+}
+.login_button{
+    margin-left: 25%;
+    width: 50%;
+    height: 25px;
+    border-radius: 5px;
+    box-shadow: 2px 5px 20px #202020;
 }
