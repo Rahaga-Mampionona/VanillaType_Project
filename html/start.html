@@ -1,18 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/start.css">
+    <link rel="shortcut icon" href="../assets/logo.png">
     <title>Vanilla Type</title>
 </head>
 <body>
-    <main>
-        <DIV>
-            <div>
-                <img src="" alt="">
+   
+    <div class="presentation">
+      
+        <h1>Welcome to Vanilla Type</h1>
+        <p>Un jeu de dactylographie pour améliorer ta vitesse et ta  précision. </p>
+        <img src="../assets/logo.png" alt="">
+        <p class="slogan">Where thoughts meet keys</p>
+
+    </div>
+ 
+    <div class="gameMode">
+
+        <h1>Choisis un mode de jeu</h1>
+
+            <div class="gameMode__cards">
+
+                <div class="card" data-mode="time">
+                    <i class="fas fa-stopwatch fa-3x"></i>
+                    <h2>Time Mode</h2>
+                    <p>Écris un maximum de mots en 60 secondes.</p>
+                </div>
+
+                <div class="card" data-mode="words">
+                    <i class="fas fa-keyboard fa-3x"></i>
+                    <h2>Words Mode</h2>
+                    <p>Écris 50 mots le plus vite possible.</p>
+                </div>
+
+                <div class="card" data-mode="quote">
+                    <i class="fas fa-quote-right fa-3x"></i>
+                    <h2>Quote Mode</h2>
+                    <p>Recopie une citation sans faire d’erreurs.</p>
+                </div>
+
             </div>
-        </DIV>
-    </main>
+
+            <button id="start__button" disabled>Start</button>
+         </div>
+
+  <div id="lettres__tombantes"></div>
+
+
+  <script src="../js/start.js"></script>
     
 </body>
 </html>
