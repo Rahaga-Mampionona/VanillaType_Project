@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fdf6e3">
+    <title>Vanilla Type</title>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <div class="loginPage">
+
+        <div class="loginPage__container">
+
+            <img src="../assets/logo.png" class="logo" alt="Vanilla Type Logo">
+            <h1 class="loginPage__container--title">Connexion</h1>
+
+            <div class="loginPage__identity">
+
+                <input 
+                    type="text"
+                    name="email"
+                    id="email"
+                    placeholder="Adresse email"
+                    class="loginPage__identity--input"
+                >
+
+                <input 
+                    type="text"
+                    name="username"
+                    id="username"
+                    placeholder="Nom d'utilisateur"
+                    class="loginPage__identity--input"
+                >
+
+                <input 
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Mot de passe"
+                    class="loginPage__identity--input"
+                >
+
+                <input 
+                    type="button"
+                    id="button"
+                    value="Se connecter"
+                    class="loginPage__button"
+                >
+
+                <p class="loginPage__message" id="loginPage--message"></p>
+                <p class="loginPage__quote">“Type fast, stay sharp.”</p>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/login.js"></script>
+</body>
+</html>

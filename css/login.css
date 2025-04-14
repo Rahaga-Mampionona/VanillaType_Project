@@ -1,0 +1,165 @@
+:root {
+    --color-background: #f3f1e7;
+    --color-white: #ffffff;
+    --color-black: #1a1a1a;
+    --color-accent: #d8a900;
+    --color-gray-light: #dfddd1;
+    --transition: 0.3s ease;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Special Elite', monospace;
+    background: linear-gradient(145deg, #f9f8f4, var(--color-background));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loginPage {
+    background-color: var(--color-white);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+}
+
+.logo {
+
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 40px auto 20px auto;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: zoomIn 1s ease;
+}
+
+
+.loginPage__container--title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: var(--color-black);
+}
+
+.loginPage__quote {
+    text-align: center;
+    margin-top: 30px;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #b9b7b7;
+    animation: fadeInUp 1.5s ease;
+    font-family: 'Special Elite', monospace;
+}
+
+
+.loginPage__identity {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.loginPage__identity--input {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--color-gray-light);
+    font-family: 'Special Elite', monospace;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+    transition: box-shadow var(--transition);
+}
+
+.loginPage__identity--input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-accent);
+    background-color: #fffbe6;
+}
+
+.loginPage__button {
+    margin-top: 10px;
+    padding: 12px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: var(--color-accent);
+    color: var(--color-black);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color var(--transition), transform var(--transition);
+}
+
+.loginPage__button:hover {
+    background-color: #c89f00;
+    transform: scale(1.02);
+}
+
+.loginPage__message {
+    font-family: 'Special Elite', monospace;
+    font-style: italic;
+    color: #444;
+    margin-top: 15px;
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.loginPage__message.show {
+    opacity: 1;
+}
+
+
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  
+  body {
+    animation: fadeInUp 0.8s ease-in-out;
+  }
+  
+  
+  .loginPage {
+    animation: fadeInUp 1s ease forwards;
+  }
+  
+  
+  .logo {
+    animation: zoomIn 1s ease;
+  }
+  
+  
+  .loginPage__identity--input:focus {
+    animation: fadeInUp 0.4s ease;
+    transform: translateY(-2px);
+  }
+  
+  
+  .loginPage__message {
+    animation: fadeInUp 0.8s ease;
+  }
+  
