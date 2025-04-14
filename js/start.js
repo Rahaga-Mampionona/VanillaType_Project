@@ -20,7 +20,7 @@ cards.forEach(card => {
 startButton.addEventListener('click', () => {
   if (selectedMode) {
     msg.textContent = `Démarrage du ${selectedMode.toUpperCase()}...`;
-    // window.location.href = `${selectedMode}.html`;
+    window.location.href = `${selectedMode}.html`;
   }
 });
 
