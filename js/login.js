@@ -1,9 +1,19 @@
 const loginPage__button = document.getElementById('button');
 const usernameInput = document.getElementById('username');
 const message = document.getElementById('loginPage--message');
+const emailInput = document.getElementById('email');
+const passwordInput = document.getElementById('password');
 
 loginPage__button.addEventListener('click', () => {
+    const email = emailInput.value.trim();
     const username = usernameInput.value.trim();
+    const password = passwordInput.value.trim();
+    
+    if (!email) {
+        message.textContent = "Veuillez entrer votre email.";
+        message.classList.add('show');
+        return;
+    }
 
     if (!username) {
         message.textContent = "Veuillez entrer votre nom d'utilisateur.";
@@ -11,6 +21,11 @@ loginPage__button.addEventListener('click', () => {
         return;
     }
 
+    if (!password) {
+        message.textContent = "Veuillez entrer votre mots de passe.";
+        message.classList.add('show');
+        return;
+    }
     
     loginPage__button.disabled = true;
     loginPage__button.style.opacity = '0.6';
