@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vanilla Type - Words Mode</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/words-mode.css">
+  <link rel="shortcut icon" href="../assets/logo.png">
+</head>
+
+<body class="wordsMode">
+    <div class="nav-toggle" id="navToggle">
+      <i class="fas fa-bars"></i>
+    </div>
+
+  <nav class="sidebar" id="sidebar">
+      <div class="sidebar__header">
+        <img src="../assets/logo.png" alt="">
+        <h2>Vanilla Type</h2>
+          <div class="close-btn" id="closeBtn">
+            <i class="fas fa-times"></i>
+          </div>
+      </div>
+    
+      <div class="sidebar__content">
+          <h3>Modes</h3>
+        <ul class="sidebar__menu">
+          <li><a href="start.html"><i class="fas fa-home"></i> Accueil</a></li>
+          <li><a href="words.html" class="active"><i class="fas fa-font"></i> Words Mode</a></li>
+          <li><a href="time-mode.html"><i class="fas fa-clock"></i> Time Mode</a></li>
+          <li><a href="quote-mode.html"><i class="fas fa-quote-right"></i> Quote Mode</a></li>
+        </ul>
+      
+        <div class="sidebar__actions">
+          <button class="btn replay-btn" id="replayBtn">
+            <i class="fas fa-redo"></i> Rejouer
+          </button>
+          <button class="btn quit-btn" id="quitBtn">
+            <i class="fas fa-sign-out-alt"></i> Quitter
+          </button>
+        </div>
+      </div>
+  </nav>
+
+  <div class="overlay" id="overlay"></div>
+
+  <header class="wordsMode__header">
+    <h1 class="wordsMode__title">Words Mode</h1>
+      <div class="mode__select">
+        <label class="mode__select--label" for="mode">Niveau :</label>
+        <select class="mode__select--dropdown" id="mode">
+          <option value="easy">Facile</option>
+          <option value="medium" selected>Moyen</option>
+          <option value="hard">Difficile</option>
+        </select>
+      </div>
+  </header>
+
+  <main class="wordsMode__main">
+    <div class="wordsMode__box">
+      <p class="wordsMode__box--display" id="word-display"></p>
+    </div>
+
+    <input class="wordsMode__box--input" type="text" id="input__place" placeholder="Tape ici..." autofocus>
+
+    <div class="wordsMode__progress">
+      <div class="wordsMode__progress--bar" id="progress__bar"></div>
+    </div>
+
+    <p class="results" id="results">Résultats :</p>
+    <p id="wordsMode__error--count">Fautes : 0</p>
+  </main>
+
+  <div class="dictionary__container">
+    <div class="dictionary__header">
+      <h3><i class="fas fa-book-open"></i> Dictionnaire</h3>
+    </div>
+    <div class="dictionary__content">
+      <div class="dictionary__search">
+        <input type="text" id="dictionaryInput" placeholder="Chercher un mot...">
+        <button id="searchDictionary"><i class="fas fa-search"></i></button>
+      </div>
+      <div id="dictionaryResults" class="dictionary__results"></div>
+    </div>
+  </div>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
