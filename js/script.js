@@ -143,7 +143,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   
     quitBtn.addEventListener("click", () => {
-      window.location.href = "index.html";
+      setTimeout(() => {
+        window.location.href = "../html/login vanillatype.html";
+      } , 2000)
     });
   
     const searchDictionary = () => {
