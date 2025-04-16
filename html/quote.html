@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/quote-mode.css">
+  <link rel="shortcut icon" href="../assets/logo.png">
+  <title>Vanilla Type - Quote Mode</title>
+</head>
+
+<body class="quoteMode">
+    <div class="nav-toggle" id="navToggle">
+      <i class="fas fa-bars"></i>
+    </div>
+
+  <nav class="sidebar" id="sidebar">
+      <div class="sidebar__header">
+        <img src="../assets/logo.png" alt="">
+        <h2>Vanilla Type</h2>
+          <div class="close-btn" id="closeBtn">
+            <i class="fas fa-times"></i>
+          </div>
+      </div>
+    
+      <div class="sidebar__content">
+          <h3>Modes</h3>
+        <ul class="sidebar__menu">
+          <li><a href="start.html"><i class="fas fa-home"></i> Accueil</a></li>
+          <li><a href="words.html"><i class="fas fa-font"></i> Words Mode</a></li>
+          <li><a href="time.html"><i class="fas fa-clock"></i> Time Mode</a></li>
+          <li><a href="quote.html" class="active"><i class="fas fa-quote-right"></i> Quote Mode</a></li>
+        </ul>
+      
+        <div class="sidebar__actions">
+          <button class="btn replay-btn" id="replayBtn">
+            <i class="fas fa-redo"></i> Rejouer
+          </button>
+          <button class="btn quit-btn" id="quitBtn">
+            <i class="fas fa-sign-out-alt"></i> Quitter
+          </button>
+        </div>
+      </div>
+  </nav>
+
+  <div class="overlay" id="overlay"></div>
+
+  <header class="quoteMode__header">
+    <h1 class="quoteMode__title">Quote Mode</h1>
+      <div class="mode__select">
+        <label class="mode__select--label" for="mode">Difficulté :</label>
+        <select class="mode__select--dropdown" id="mode">
+          <option value="easy">Facile</option>
+          <option value="medium" selected>Moyen</option>
+          <option value="hard">Difficile</option>
+        </select>
+      </div>
+  </header>
+
+  <main class="quoteMode__main">
+    <div class="quoteMode__box">
+      <p class="quoteMode__box--display" id="quote-display"></p>
+      <p class="quoteMode__box--author" id="quote-author"></p>
+    </div>
+
+    <textarea class="quoteMode__box--input" id="input__place" placeholder="Tape la citation ici..." autofocus rows="4"></textarea>
+
+    <div class="quoteMode__progress">
+      <div class="quoteMode__progress--bar" id="progress__bar"></div>
+    </div>
+
+    <div class="quoteMode__stats">
+      <p class="results" id="results">Prêt ?</p>
+      <div class="stats__container">
+        <p id="quoteMode__error--count">Fautes : 0</p>
+        <p id="quoteMode__time--count">Temps : 0s</p>
+        <p id="quoteMode__wpm--count">WPM : 0</p>
+      </div>
+    </div>
+  </main>
+
+  
+    <div class="dictionary__container">
+      <div class="dictionary__header">
+        <h3><i class="fas fa-info-circle"></i> À propos de la citation</h3>
+      </div>
+      <div class="dictionary__content">
+        <div id="quoteInfo" class="quote-info">
+          <div class="info-section">
+            <h4 class="info-title">Auteur</h4>
+            <p id="quoteAuthorInfo" class="info-content"></p>
+          </div>
+          <div class="info-section">
+            <h4 class="info-title">Contexte</h4>
+            <p id="quoteContext" class="info-content"></p>
+          </div>
+          <div class="info-section">
+            <h4 class="info-title">Signification</h4>
+            <p id="quoteMeaning" class="info-content"></p>
+          </div>
+          <div class="info-section">
+            <h4 class="info-title">Date</h4>
+            <p id="quoteDate" class="info-content"></p>
+          </div>
+          <div class="info-section">
+            <h4 class="info-title">Source</h4>
+            <p id="quoteSource" class="info-content"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  
+
+  <script src="../js/quote_mode.js"></script>
+</body>
+</html>
